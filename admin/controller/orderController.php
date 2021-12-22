@@ -4,11 +4,11 @@ include '../../dao/OrderDAO.php';
 include '../../dao/ProductDAO.php';
 if (isset($_GET['action'])) {
     switch ($_GET['action']) {
-        // case "xoa":
-        //     $madon = $_GET['madon'];
-        //     OrderDAO::deleteOrder($madon, $conn);
-        //     header("Location: ../view/quanlydonhang.php");
-        //     break;
+        case "xoa":
+            $madon = $_GET['madon'];
+            OrderDAO::deleteOrder($madon, $conn);
+            header("Location: ../view/quanlydonhang.php");
+            break;
         case "duyet":
             session_start();
             $madon = $_GET['madon'];
