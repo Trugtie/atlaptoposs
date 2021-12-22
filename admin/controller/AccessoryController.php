@@ -3,18 +3,18 @@ include "../../controller/autoload.php";
 include "../../dao/AccessoryDAO.php";
 include "../../util/validate.php";
 
-// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-//     $action = $_GET['action'];
-//     switch ($action) {
-//         case "delete":
-//             $masp = $_GET['masp'];
-//             $oldPhukien =  AccessoryDAO::getPhuKien($masp, $conn);
-//             unlink(dirname(__DIR__) . '/view' . $oldPhukien['hinh']);
-//             AccessoryDAO::deletePhuKien($masp, $conn);
-//             header("Location: ../view/quanlysanpham.php");
-//             break;
-//     }
-// } else {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $action = $_GET['action'];
+    switch ($action) {
+        case "delete":
+            $masp = $_GET['masp'];
+            $oldPhukien =  AccessoryDAO::getPhuKien($masp, $conn);
+            unlink(dirname(__DIR__) . '/view' . $oldPhukien['hinh']);
+            AccessoryDAO::deletePhuKien($masp, $conn);
+            header("Location: ../view/quanlysanpham.php");
+            break;
+    }
+} else {
     $action = $_POST['action'];
     switch ($action) {
         case "addPhukien":
@@ -88,5 +88,5 @@ include "../../util/validate.php";
                 }
             }
             break;
-        // }
+        }
 }
