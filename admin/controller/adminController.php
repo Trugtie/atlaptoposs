@@ -3,16 +3,16 @@ include "../../controller/autoload.php";
 include "../../dao/AdminDAO.php";
 include "../../util/validate.php";
 
-// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-//     $action = $_GET['action'];
-//     switch ($action) {
-//         case "delete":
-//             $ma = $_GET['maad'];
-//             AdminDAO::deleteAdmin($ma,$conn);
-//             header("Location: ../view/quanlynhanvien.php");
-//             break;
-//     }
-// } else {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $action = $_GET['action'];
+    switch ($action) {
+        case "delete":
+            $ma = $_GET['maad'];
+            AdminDAO::deleteAdmin($ma,$conn);
+            header("Location: ../view/quanlynhanvien.php");
+            break;
+    }
+} else {
     $action = $_POST['action'];
     switch ($action) {
         case "insertAdmin":
@@ -46,10 +46,8 @@ include "../../util/validate.php";
             $username = $_POST['username'];
             $password = $_POST['password'];  
             $admin = new Admin($ma, $email, $username, $password, $ho, $ten, $sdt, $diachi);
-            // var_dump($admin);
-            // exit();
             AdminDAO::updateAdmin($admin, $ma, $conn);
             header("Location: ../view/quanlynhanvien.php");
             break;
     }
-// }
+}
