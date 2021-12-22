@@ -36,20 +36,20 @@ include "../../util/validate.php";
                 header("Location: ../view/quanlynhanvien.php");
             }
             break;
-//         case "update":
-//             $ten = $_POST['ten'];
-//             $ho = $_POST['ho'];
-//             $ma = $_POST['ma'];
-//             $sdt = $_POST['sdt'];
-//             $diachi = $_POST['diachi'];
-//             $email = $_POST['email'];
-//             $username = $_POST['username'];
-//             $password = $_POST['password'];  
-//             $admin = new Admin($ma, $email, $username, $password, $ho, $ten, $sdt, $diachi);
-//             // var_dump($admin);
-//             // exit();
-//             AdminDAO::updateAdmin($admin, $ma, $conn);
-//             header("Location: ../view/quanlynhanvien.php");
-//             break;
+        case "update":
+            $ten = $_POST['ten'];
+            $ho = $_POST['ho'];
+            $ma = $_POST['ma'];
+            $sdt = $_POST['sdt'];
+            $diachi = $_POST['diachi'];
+            $email = $_POST['email'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];  
+            $admin = new Admin($ma, $email, $username, $password, $ho, $ten, $sdt, $diachi);
+            // var_dump($admin);
+            // exit();
+            AdminDAO::updateAdmin($admin, $ma, $conn);
+            header("Location: ../view/quanlynhanvien.php");
+            break;
     }
 // }
