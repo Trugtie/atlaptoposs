@@ -2,23 +2,23 @@
 include "../controller/autoload.php";
 include '../dao/ProductDAO.php';
 session_start();
-// //Cong tru so luong
-// if(isset($_GET['action']))
-// {
-//     $vitri = $_GET['vitri'];
-//     switch ($_GET['action']){
-//         case "plus":
-//             $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()+1);
-//             header("Location: ../view/giohang.php");
-//             break;
-//         case "minus":
-//             $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()-1);
-//             if($_SESSION['cart'][$vitri]->getSoluong()==0)
-//             unset($_SESSION['cart'][$vitri]);
-//             header("Location: ../view/giohang.php");
-//             break;
-//     }
-// }
+//Cong tru so luong
+if(isset($_GET['action']))
+{
+    $vitri = $_GET['vitri'];
+    switch ($_GET['action']){
+        case "plus":
+            $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()+1);
+            header("Location: ../view/giohang.php");
+            break;
+        case "minus":
+            $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()-1);
+            if($_SESSION['cart'][$vitri]->getSoluong()==0)
+            unset($_SESSION['cart'][$vitri]);
+            header("Location: ../view/giohang.php");
+            break;
+    }
+}
 // else //Xoa gio hang
 // if(isset($_GET['vitri'])){
 //     $vitri = $_GET['vitri'];
