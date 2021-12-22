@@ -19,12 +19,12 @@ if(isset($_GET['action']))
             break;
     }
 }
-// else //Xoa gio hang
-// if(isset($_GET['vitri'])){
-//     $vitri = $_GET['vitri'];
-//     unset($_SESSION['cart'][$vitri]);
-//     header('Location: ../view/giohang.php');
-// }
+else //Xoa gio hang
+if(isset($_GET['vitri'])){
+    $vitri = $_GET['vitri'];
+    unset($_SESSION['cart'][$vitri]);
+    header('Location: ../view/giohang.php');
+}
 
 //Them gio hang
 if (isset($_SESSION['user'])) {
