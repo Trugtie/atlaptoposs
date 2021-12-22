@@ -54,7 +54,7 @@ else{
                     OrderDAO::insertDetailOrder($product->getMaSp(),$madon,$product->getSoluong(),$thanhtien,$conn);
                 }
                 $_SESSION['notify']="Đã dặt hàng thành công!";
-
+                //Gui email
                 $contentEmail = '';
                   // Thông tin Khách hàng
                   $contentEmail = '<p>
