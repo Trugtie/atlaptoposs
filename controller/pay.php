@@ -13,27 +13,27 @@ if(empty($_SESSION['cart'])){
 else{
     if(isset($_POST['action'])){
         switch($_POST['action']){
-            // case "apdungkm":
-            //     if(!empty($_POST['makm'])){
-            //         $makm = $_POST['makm'];
-            //         $km = SaleDAO::findSale($makm, $conn);
-            //         if($km==false){
-            //            $_SESSION['error']="Mã khuyến mãi không hợp lệ!";
-            //            header("Location:../view/thanhtoan.php");
-            //         }
-            //         else{
-            //             $thanhtien = $_POST['thanhtien'];
-            //             $giatrigiam = $km['giatrigiam']/100;
-            //             $tienkhuyenmai = $thanhtien * $giatrigiam;
-            //             $_SESSION['km']=$tienkhuyenmai;
-            //             $_SESSION['makm']=$makm;
-            //             header("Location:../view/thanhtoan.php");
-            //         }
-            //     }
-            //     else{
-            //         header("Location:../view/thanhtoan.php");
-            //     }
-            //     break;
+            case "apdungkm":
+                if(!empty($_POST['makm'])){
+                    $makm = $_POST['makm'];
+                    $km = SaleDAO::findSale($makm, $conn);
+                    if($km==false){
+                       $_SESSION['error']="Mã khuyến mãi không hợp lệ!";
+                       header("Location:../view/thanhtoan.php");
+                    }
+                    else{
+                        $thanhtien = $_POST['thanhtien'];
+                        $giatrigiam = $km['giatrigiam']/100;
+                        $tienkhuyenmai = $thanhtien * $giatrigiam;
+                        $_SESSION['km']=$tienkhuyenmai;
+                        $_SESSION['makm']=$makm;
+                        header("Location:../view/thanhtoan.php");
+                    }
+                }
+                else{
+                    header("Location:../view/thanhtoan.php");
+                }
+                break;
             case "dathang":
                 $nguoinhan = $_POST['nguoinhan'];
                 $sdt = $_POST['sdt'];
