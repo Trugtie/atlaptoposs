@@ -1,0 +1,232 @@
+:root {
+  --main-font: "Helvetica", sans-serif;
+  --secondary-font: "Goldman", sans-serif;
+  --main-font-color: #262a2d;
+  --sub-header-font-color: #46484a;
+  --secondary-font-color: #ffffff;
+  --first-color: #fffb8a;
+  --second-color: #ffbdc3;
+  --third-color: #a3e0ff;
+  --showcase-color: #f0faff;
+  --btn-color: #5c7e90;
+  --nav-color: #527080;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #e2e2e0;
+}
+
+/* banner */
+.banner {
+  background-color: #e2e2e0;
+}
+
+.text-banner {
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #707070;
+}
+
+a {
+  color: #707070;
+}
+
+
+#content{
+    height: 100%;
+    background-image: url("../images/login.jpg");
+    background-size: cover;
+    vertical-align: center;
+}
+
+#admin{
+    height: 100%;
+    background-image: url("../images/adminlogin.jpg");
+    background-size: cover;
+    vertical-align: center;
+}
+
+.width-register {
+  width: 500px;
+  margin-right: 80px;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.width-resetpass {
+  width: 650px;
+  margin-right: 40px;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: .75rem;
+  }
+  
+  
+  
+  .card-signin {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 0;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  
+  
+  .card-signin .card-body {
+    padding: 2rem;
+    
+  }
+  
+  .form-signin {
+    width: 100%;
+  }
+  
+  .form-signin .btn {
+    font-size: 80%;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+    border-radius: 30px;
+    width: 140px;
+    margin-left: 70px;
+    background-color: #5C7E90;
+    color: #fff;;
+  }
+  
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label-group input {
+    height: auto;
+ 
+  }
+  
+  .form-label-group>input,
+  .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+  }
+  
+  .form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    transition: all .1s ease-in-out;
+  }
+  
+  .form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+  }
+  
+  .form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #46484a;
+  }
+
+
+  /* login */
+  .text-link-login a{
+    color: rgb(36, 36, 204);
+  }
+  .create-acc{
+    text-align: center;
+  }
+
+  /* Modal */
+  .modal{
+    display: flex !important;
+    justify-content:center;
+    align-items: center;
+    background-color:rgba(0,0,0, 0.5);
+  }
+
+  .modal-content{
+    width: 450px;
+    height: 200px;
+  }
+
+  /* SendMail */
+  .btnSend{
+    top:50%;
+    transform: translateY(-50%);
+    right:0;
+    background:none;
+    border:none;
+    transition:all .3s;
+    z-index: 1;
+  }
+  
+  .btnSend:hover{
+    color:rgb(104, 103, 103);
+  }
+
+  .btnReset{
+    font-size: 80%;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+    border-radius: 30px;
+    width: 140px;
+    margin-left: 70px;
+    background-color: #5C7E90;
+    color: #fff;;
+  }
+  
+  .btn:hover{
+    color:rgb(31, 31, 31);
+    background-color: rgb(147, 217, 255)
+  }

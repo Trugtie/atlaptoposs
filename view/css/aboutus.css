@@ -1,0 +1,37 @@
+.heading{
+    font-family: var(--secondary-font);
+    font-size:4.853rem;
+    font-weight: bolder;
+}
+.description{
+    font-family: var(--main-font);
+    font-size: 3rem;
+    color:rgba(0, 0, 0, 0.644);
+    margin-top: 8rem;
+}
+.about{
+    height:70vh;
+}
+.history{
+    margin-bottom: 5rem !important;
+}
+.team img{
+    max-width:20rem;
+}
+.team .heading{
+    margin-top:10rem;
+    margin-bottom: 10rem;
+    font-size:4.853rem;
+}
+.team h2{
+    margin: 2rem 0;
+    font-size:3rem;
+    font-family: var(--secondary-font);
+}
+
+.team p{
+    font-size:3rem;
+    font-family: var(--main-font);
+    color:rgba(0, 0, 0, 0.644);
+    max-width:44rem;
+}

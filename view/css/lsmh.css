@@ -1,0 +1,102 @@
+.table {
+    background-color: white;
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    animation: fade-left 2s;
+  }
+  .table img {
+    max-width: 23.1rem;
+  }
+  .table th {
+    vertical-align: middle;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .table td {
+    height: 16.9rem;
+    vertical-align: middle;
+    text-align: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    font-family: var(--main-font);
+  }
+  .table th {
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+  }
+  .diachi {
+    max-width: 20.9rem;
+  }
+  .table a {
+    text-decoration: none;
+    color: black;
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: all 0.3s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    font-family: var(--secondary-font);
+  }
+  
+  .table a:hover {
+    background-color: var(--first-color);
+  }
+
+  .plus,
+  .minus {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  .plus:hover,
+  .minus:hover {
+    background-color: white !important;
+    color: var(--third-color);
+  }
+  .tongtientitle {
+    height: 7rem;
+  }
+  .tongtien {
+    color: red;
+  }
+  
+  .xem {
+    background-color: var(--second-color);
+  }
+
+  .chontiep,
+  .thanhtoan {
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    background-color: black;
+    padding: 2rem 5rem;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    color: black;
+    min-width: 24.1rem;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 0.3s;
+  }
+  .chontiep {
+    background-color: #f8fbc5;
+    margin-right: 2rem;
+    animation: fade-up 2s;
+  }
+  .thanhtoan {
+    background-color: #a3e0ff;
+    animation: fade-down 2s;
+  }
+  
+  .chontiep:hover,
+  .thanhtoan:hover {
+    background-color: rgba(255, 0, 0, 0.658);
+    color: white;
+  }
+  
+  
