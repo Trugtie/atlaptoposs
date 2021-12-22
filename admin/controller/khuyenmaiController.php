@@ -55,42 +55,42 @@ include "../../util/validate.php";
                 header("Location: ../view/quanlykhuyenmai.php");
             }
 
-    //         break;
-    //     case "updateKhuyenmai":
-    //         $hinh = $_FILES["hinh"];
-    //         $tenkm = $_POST['tenkm'];
-    //         $makm = $_POST['makm'];
-    //         $mota = $_POST['mota'];
-    //         $ngaybd = $_POST['ngaybd'];
-    //         $giatrigiam = $_POST['giatrigiam'];
-    //         $ngaykt = $_POST['ngaykt'];
+            break;
+        case "updateKhuyenmai":
+            $hinh = $_FILES["hinh"];
+            $tenkm = $_POST['tenkm'];
+            $makm = $_POST['makm'];
+            $mota = $_POST['mota'];
+            $ngaybd = $_POST['ngaybd'];
+            $giatrigiam = $_POST['giatrigiam'];
+            $ngaykt = $_POST['ngaykt'];
 
-    //         if (!empty($hinh['name']))
-    //             $error = validate::validateKhuyenmai($hinh, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt);
-    //         else
-    //             $error = validate::validateKhuyenmaiWithoutImage($tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt);
+            if (!empty($hinh['name']))
+                $error = validate::validateKhuyenmai($hinh, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt);
+            else
+                $error = validate::validateKhuyenmaiWithoutImage($tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt);
 
-    //         if (!empty($error)) {
-    //             session_start();
-    //             $_SESSION["error"] = $error;
-    //             header("Location: ../view/editkhuyenmai.php?makm=$makm");
-    //         } else {
-    //             if (!empty($hinh['name'])) {
-    //                 $temp = $hinh["tmp_name"];
-    //                 $name = $hinh["name"];
-    //                 $oldKhuyenmai =  KhuyenMaiDAO::getKhuyenMai($makm, $conn);
-    //                 unlink(dirname(__DIR__) . '/view' . $oldKhuyenmai['hinh']);
-    //                 move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
-    //                 $imagePath = '/images/' . $name;
-    //                 $khuyenmai = new KhuyenMai($makm, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt, $imagePath);
-    //                 KhuyenMaiDAO::updateKhuyenmai($khuyenmai, $makm, $conn);
-    //                 header("Location: ../view/quanlykhuyenmai.php");
-    //             } else {
-    //                 $khuyenmai = new KhuyenMai($makm, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt, $imagePath);
-    //                 KhuyenMaiDAO::updatKhuyenmaiWithoutImage($khuyenmai, $makm, $conn);
-    //                 header("Location: ../view/quanlykhuyenmai.php");
-    //             }
-    //         }
-    //         break;
+            if (!empty($error)) {
+                session_start();
+                $_SESSION["error"] = $error;
+                header("Location: ../view/editkhuyenmai.php?makm=$makm");
+            } else {
+                if (!empty($hinh['name'])) {
+                    $temp = $hinh["tmp_name"];
+                    $name = $hinh["name"];
+                    $oldKhuyenmai =  KhuyenMaiDAO::getKhuyenMai($makm, $conn);
+                    unlink(dirname(__DIR__) . '/view' . $oldKhuyenmai['hinh']);
+                    move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
+                    $imagePath = '/images/' . $name;
+                    $khuyenmai = new KhuyenMai($makm, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt, $imagePath);
+                    KhuyenMaiDAO::updateKhuyenmai($khuyenmai, $makm, $conn);
+                    header("Location: ../view/quanlykhuyenmai.php");
+                } else {
+                    $khuyenmai = new KhuyenMai($makm, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt, $imagePath);
+                    KhuyenMaiDAO::updatKhuyenmaiWithoutImage($khuyenmai, $makm, $conn);
+                    header("Location: ../view/quanlykhuyenmai.php");
+                }
+            }
+            break;
     // }
 }
