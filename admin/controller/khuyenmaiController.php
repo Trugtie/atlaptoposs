@@ -2,26 +2,26 @@
 include "../../controller/autoload.php";
 include "../../dao/KhuyenmaiDAO.php";
 include "../../util/validate.php";
-// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-//     $action = $_GET['action'];
-//     switch ($action) {
-//         case "delete":
-//             $ma = $_GET['makm'];
-//             $check = KhuyenmaiDAO::checkKhuyenMaiDonHang($ma,$conn);
-//             if($check == true){
-//                 session_start();
-//                 $_SESSION["error"] = "Khuyến mãi này đang được sử dụng ở một số đơn hàng không thể xóa!";
-//                 header("Location: ../view/quanlykhuyenmai.php");
-//             }
-//             else{
-//                 KhuyenmaiDAO::deleteKhuyenmai($ma, $conn);
-//                 $oldKhuyenmai =  KhuyenmaiDAO::getKhuyenMai($ma, $conn);
-//                 unlink(dirname(__DIR__) . '/view' . $oldKhuyenmai['hinh']);
-//                 header("Location: ../view/quanlyKhuyenmai.php");
-//             }
-//             break;
-//     }
-// } else {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $action = $_GET['action'];
+    switch ($action) {
+        case "delete":
+            $ma = $_GET['makm'];
+            $check = KhuyenmaiDAO::checkKhuyenMaiDonHang($ma,$conn);
+            if($check == true){
+                session_start();
+                $_SESSION["error"] = "Khuyến mãi này đang được sử dụng ở một số đơn hàng không thể xóa!";
+                header("Location: ../view/quanlykhuyenmai.php");
+            }
+            else{
+                KhuyenmaiDAO::deleteKhuyenmai($ma, $conn);
+                $oldKhuyenmai =  KhuyenmaiDAO::getKhuyenMai($ma, $conn);
+                unlink(dirname(__DIR__) . '/view' . $oldKhuyenmai['hinh']);
+                header("Location: ../view/quanlyKhuyenmai.php");
+            }
+            break;
+    }
+} else {
     $action = $_POST['action'];
     switch ($action) {
         case "insertKhuyenmai":
@@ -92,5 +92,5 @@ include "../../util/validate.php";
                 }
             }
             break;
-    // }
+    }
 }
