@@ -8,8 +8,17 @@ if(isset($_GET['action']))
     $vitri = $_GET['vitri'];
     switch ($_GET['action']){
         case "plus":
-            $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()+1);
-            header("Location: ../view/giohang.php");
+            $masp = $_SESSION['cart'][$vitri]->getMaSp();
+            $soLuongDat = $_SESSION['cart'][$vitri]->getSoluong();
+            $product = ProductDAO::getProduct($masp, $conn);
+            $soLuongCon = $product['soluong'];
+            if ($soLuongDat == $soLuongCon) {
+                $_SESSION['error'] = "Số lượng đặt hàng vượt quá kho hàng, mặt hàng này chỉ còn $soLuongCon sản phẩm!";
+                header("Location: ../view/giohang.php");
+            } else {
+                $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong() + 1);
+                header("Location: ../view/giohang.php");
+            }
             break;
         case "minus":
             $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()-1);
